@@ -76,5 +76,38 @@
 
         }
 
+        function test_makeWordPhraseMatch_None()
+        {
+            //arrange
+
+            $test_makeWordPhraseMatch_None = new RepeatCounter;
+            $word = "boy";
+            $phrase = "I am a girl";
+
+            //act
+
+            $result = $test_makeWordPhraseMatch_None->countRepeats($word, $phrase);
+
+            //assert
+
+            $this->assertEquals("matches found:0", $result);
+        }
+
+        function test_makeWordPhraseMatch_Multiple(){
+            //arrange
+
+            $test_makeWordPhraseMatch_Multiple = new RepeatCounter;
+            $word = "food";
+            $phrase = "All I think of is food food";
+
+            //act
+
+            $result = $test_makeWordPhraseMatch_Multiple->countRepeats($word, $phrase);
+
+            //assert
+
+            $this->assertEquals("matches found:2", $result);
+        }
+
 
     }
