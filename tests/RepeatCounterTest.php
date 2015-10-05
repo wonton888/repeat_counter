@@ -41,5 +41,40 @@
 
         }
 
+        function test_makeWordMatch(){
+            //arrange
+
+            $test_makeWordMatch = new RepeatCounter;
+            $word = "apple";
+            $phrase = "apple";
+
+            //act
+
+            $result = $test_makeWordMatch->countRepeats($word,$phrase);
+
+            //assert
+
+            $this->assertEquals("matches found:1", $result);
+
+        }
+
+        function test_makeWordMatch_None()
+        {
+            //arrange
+
+            $test_makeWordMatch_None = new RepeatCounter;
+            $word = "apple";
+            $phrase = "orange";
+
+            //act
+
+            $result = $test_makeWordMatch_None->countRepeats($word, $phrase);
+
+            //assert
+
+            $this->assertEquals("matches found:0", $result);
+
+        }
+
 
     }
