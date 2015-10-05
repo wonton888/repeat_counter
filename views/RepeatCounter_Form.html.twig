@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel='stylesheet' href="https:/maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <title>Repeat Counter</title>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <h1>Find Words!</h1>
+            <h2>Enter the word you want to find:</h2>
+
+            <form action='/result' method="post">
+                <div class="form-group">
+                    <label for='word'>Word:</label>
+                    <input id='word' name='word' class='form-control' type='text'>
+                </div>
+                <h2>Enter the phrase so you can find the word:</h2>
+                    <div class="form-group">
+                        <label for="phrase">Phrase</label>
+                        <input id="phrase" name="phrase" class='form-control' type='text'>
+                    </div>
+                    <button type="submit" class="btn btn-success">Find the Words!</button>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
